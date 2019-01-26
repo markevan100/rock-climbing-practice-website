@@ -1,0 +1,18 @@
+<h1> Displayng selected practice </h1>
+<%= link_to "Back to Index", practices_path %>
+<p>
+  Date: <%= @practice.date %>
+<p>
+<p>
+  Author: <%= @practice.author %>
+<p>
+<p>
+  Plan: <%= @practice.plan %>
+<p>
+<p>
+  Approvals: <%= @practice.approval_1 %>, <%= @practice.approval_2 %>
+<p>
+<p>
+  <%= link_to "Edit", edit_practice_path(@practice) %>
+<p>
+<%= link_to "Delete", practice_path(@practice), method: :delete, data: {confirm: "Are you sure?"} %>

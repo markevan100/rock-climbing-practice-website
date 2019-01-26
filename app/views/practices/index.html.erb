@@ -1,0 +1,26 @@
+<h1>List of practices</h1>
+<p>
+  <%= link_to "Create new practice", new_practice_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Author</th>
+    <th>Plan</th>
+    <th>Approvals</th>
+    <th></th>
+  </tr>
+
+  <% @practices.each do |practice| %>
+  <tr>
+    <td><%= link_to practice.date, practice_path(practice) %></td>
+    <td><%= practice.author %></td>
+    <td><%= practice.plan %></td>
+    <td><%= practice.approval_1 %></td>
+    <td><%= practice.approval_2 %></td>
+
+
+  </tr>
+  <% end %>
+</table>
