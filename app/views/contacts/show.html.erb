@@ -1,0 +1,18 @@
+<h1> Displayng selected contact </h1>
+<!-- <%= link_to "Back to Index", practices_path %> -->
+<p>
+  Title: <%= @contact.title %>
+<p>
+<p>
+  Name: <%= @contact.name %>
+<p>
+<p>
+  Email: <%= @contact.email %>
+<p>
+<p>
+  Cell: <%= @contact.cell %>
+<p>
+<p>
+  <%= link_to "Edit", edit_contact_path(@contact) %>
+<p>
+<%= link_to "Delete", contact_path(@contact), method: :delete, data: {confirm: "Are you sure?"} %>

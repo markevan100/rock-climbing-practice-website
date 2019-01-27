@@ -12,19 +12,25 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <!-- <li class="active"><a href="#">Home</a></li> -->
+              <li class="active"><%= link_to "Home", welcome_home_path %></li>
+              <li> <%= link_to "About", welcome_about_path %></li>
+              <!-- <li><a href="#">About</a></li> -->
+              <li><%= link_to "Contacts", contacts_path %></li>
+
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
+                  <li><%= link_to "Create new practice", new_practice_path %></li>
+                  <li><%= link_to "All practices", practices_path %></li>
+                  <li><%= link_to "Roster", welcome_roster_path %></li>
+                  
                   <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
+                  <li class="dropdown-header">External links</li>
+                  <li><a href="https://docs.google.com/document/d/1DYTB5hE5p9Ixvb1XsXCOw-0QrmA9uC8xloO4Vdlhv8w/edit?ts=5bfc2815">Goals 18-19</a></li>
+                  <li><a href="https://www.climbtheleague.org/">League Website</a></li>
+                  <li><a href="https://www.earthtreksclimbing.com/englewood/">Earth Treks</a></li>
+                  <li><a href="https://www.kentdenver.org/athletics/athletics-at-kent-denver">Kent Denver Athletics</a></li>
                 </ul>
               </li>
             </ul>
