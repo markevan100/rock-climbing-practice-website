@@ -1,0 +1,21 @@
+<h1> Displayng selected climber </h1>
+<!-- <%= link_to "Back to Index", practices_path %> -->
+<p>
+  Name: <%= @climber.name %>
+<p>
+<p>
+  Year: <%= @climber.year %>
+<p>
+<p>
+  Potential award: <%= @climber.award_1 %>
+<p>
+<p>
+  Potential award: <%= @climber.award_2 %>
+<p>
+<p>
+  Potential award: <%= @climber.award_3 %>
+<p>
+<p>
+<%= link_to "Edit", edit_climber_path(@climber) %>
+<p>
+<%= link_to "Delete", climber_path(@climber), method: :delete, data: {confirm: "Are you sure?"} %>

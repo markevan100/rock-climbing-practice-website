@@ -1,0 +1,34 @@
+<h1> Captains </h1>
+<% @climbers.each do |climber| %>
+  <% if climber.year.to_s.downcase == "captain" %>
+      <p><%= link_to climber.name, climber_path(climber) %> (Senior) / <%= climber.award_1 %>, <%= climber.award_2 %>, <%= climber.award_3 %></p>
+  <% end %>
+<% end %>
+<br>
+<h2> Seniors </h2>
+<% @climbers.each do |climber| %>
+  <% if climber.year.to_s.downcase == "senior" %>
+      <p><%= link_to climber.name, climber_path(climber) %> / <%= climber.award_1 %>, <%= climber.award_2 %>, <%= climber.award_3 %></p>
+  <% end %>
+<% end %>
+<br>
+<h2> Juniors </h2>
+<% @climbers.each do |climber| %>
+  <% if climber.year.to_s.downcase == "junior" %>
+      <p><%= link_to climber.name, climber_path(climber) %> / <%= climber.award_1 %>, <%= climber.award_2 %>, <%= climber.award_3 %></p>
+  <% end %>
+<% end %>
+<br>
+<h2> Sophomores </h2>
+<% @climbers.each do |climber| %>
+  <% if climber.year.to_s.downcase == "sophomore" %>
+      <p><%= link_to climber.name, climber_path(climber) %> / <%= climber.award_1 %>, <%= climber.award_2 %>, <%= climber.award_3 %></p>
+  <% end %>
+<% end %>
+<br>
+<h2> Freshman </h2>
+<% @climbers.each do |climber| %>
+  <% if climber.year.to_s.downcase == "freshman" %>
+      <p><%= link_to climber.name, climber_path(climber) %> / <%= climber.award_1 %>, <%= climber.award_2 %>, <%= climber.award_3 %></p>
+  <% end %>
+<% end %>

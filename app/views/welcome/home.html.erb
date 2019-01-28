@@ -6,8 +6,10 @@
   <ul>
     <li>Create new practice plans</li>
     <li>Approve of practice suggestions</li>
+    <li>Add award suggestions for climbers</li>
     <li>Find team info and relevant links</li>
   </ul>
   <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Create a new practice</a> -->
   <%= link_to "Create a new practice", new_practice_path, class: "btn btn-primary btn-lg", role: "button" %>
+  <%= link_to "See newest practice", practice_path(@last_practice), class: "btn btn-primary btn-lg", role: "button" %>
 </div>

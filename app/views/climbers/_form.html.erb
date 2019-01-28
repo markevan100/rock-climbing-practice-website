@@ -1,0 +1,34 @@
+<% if @climber.errors.any? %>
+  <h2> The following errors prevented climber from saving. </h2>
+  <ul>
+  <% @climber.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @climber do |f| %>
+<p>
+  <%= f.label :name %></br>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :class %></br>
+  <%= f.text_field :year %>
+</p>
+<p>
+  <%= f.label :award_1 %></br>
+  <%= f.text_field :award_1 %>
+</p>
+<p>
+  <%= f.label :award_2 %></br>
+  <%= f.text_field :award_2 %>
+</p>
+<p>
+  <%= f.label :award_3 %></br>
+  <%= f.text_field :award_3 %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

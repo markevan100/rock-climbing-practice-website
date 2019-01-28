@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_27_171455) do
+ActiveRecord::Schema.define(version: 2019_01_28_182845) do
+
+  create_table "climbers", force: :cascade do |t|
+    t.string "name"
+    t.string "award_1", default: "?"
+    t.string "award_2", default: "?"
+    t.string "award_3", default: "?"
+    t.string "year"
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "title"

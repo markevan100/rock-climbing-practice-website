@@ -3,7 +3,7 @@
   <%= link_to "Create new contact", new_contact_path %>
 </p>
 
-<table>
+<!-- <table>
   <tr>
     <th>Title</th>
     <th>Name</th>
@@ -21,4 +21,16 @@
 
   </tr>
   <% end %>
-</table>
+</table> -->
+
+<div class="d-flex flex-row">
+  <% @contacts.each do |contact| %>
+
+  <div class="p-2"><b><%= contact.title %></b></div>
+  <div class="p-2"><%= link_to contact.name, contact_path(contact) %></div>
+  <div class="p-2"><%= contact.email %></div>
+  <div class="p-2"><%= contact.cell %></div>
+  <br>
+  <br>
+  <% end %>
+</div>

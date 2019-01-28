@@ -1,9 +1,6 @@
 <h1>List of practices</h1>
-<p>
-  <%= link_to "Create new practice", new_practice_path %>
-</p>
 
-<table>
+<!-- <table>
   <tr>
     <th>Date</th>
     <th>Author</th>
@@ -23,4 +20,21 @@
 
   </tr>
   <% end %>
-</table>
+</table> -->
+<h4> Author / Plan / Approvals </h4>
+<ul class="list-group">
+<% @practices.each do |practice| %>
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span class="label label-pill label-info" align="right"><%= link_to practice.date, practice_path(practice) %></span>
+    <%= practice.author %> /
+    <%= practice.plan %> /
+    <%= practice.approval_1 %> ,
+    <%= practice.approval_2 %>
+  </li>
+<% end %>
+</ul>
+
+<p>
+  <%= link_to "Create new practice", new_practice_path %>
+</p>

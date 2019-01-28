@@ -41,6 +41,11 @@ class PracticesController < ApplicationController
     redirect_to practices_path
   end
 
+  def recent
+    @practice = Practice.last
+    render :recent
+  end
+
   private
   def practice_params
     params.require(:practice).permit(:date, :plan, :author, :approval_1, :approval_2)
